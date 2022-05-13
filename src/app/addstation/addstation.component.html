@@ -1,0 +1,82 @@
+<div class="container-fluid">
+    <form [formGroup]= "addnew" (ngSubmit)="onSubmit(addnew.value)">
+    <div class="card">
+      <div class="card-header text-center">Add New Station</div>
+      <div class="card-body">
+
+        
+        <div class="row">
+            <div class="col-sm-4">
+                 <mat-form-field appearance="outline">
+                    <mat-label>Stop</mat-label>
+                    <input matInput  placeholder="stop" ngModel formControlName="stop" >
+                    <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                      <span>Please Enter Valid Number</span>
+                    </mat-error> -->
+                  </mat-form-field>
+                  </div>
+                  </div>
+                  <br>
+                  <br>
+                  <!-- <div class="row">
+                    <div class="col-sm-4">
+                  <mat-form-field>
+                    <mat-label>stop</mat-label>
+                    <input placeholder="stop">
+                  </mat-form-field>
+            </div>
+            </div> -->
+            <div class="row">
+              <div class="col-sm-12 table-responsive" formArrayName="trains">
+                <table class="table">
+                  <thead>
+                      <tr>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Train ID</th>
+                        <!-- <th style="white-space: nowrap;padding-right: 4em;float:center">Train Name </th>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center">Capacity </th>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center">Type</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let train of addnew.controls.trains['controls']; let i=index"  [formGroupName]= "i">
+                        <td style="white-space: nowrap;">
+                          <mat-form-field appearance="outline">
+                              <mat-label>Train ID</mat-label>
+                           <input  id="trainId{{i}}" ngModel matInput formControlName="trainId" >
+                          </mat-form-field>
+                        </td>
+                        <!-- <td> <input  id="trainName{{i}}" ngModel matInput formControlName="trainName" ></td>
+                        <td> <input  id="capacity{{i}}" ngModel matInput formControlName="capacity" ></td>
+                        <td> <input  id="type{{i}}" ngModel matInput formControlName="type"></td> -->
+                        <!-- <td> <textarea id="trainName{{i}}" formControlName="train.trainName"    class="form-control reset" ></textarea></td>
+                        <td> <textarea formControlName="train.capacity" class="form-control reset"></textarea></td>
+                        <td> <textarea formControlName="train.type" class="form-control reset"></textarea></td> -->
+                        <td> <button *ngIf="addnew.controls.trains['controls'].length > 1" (click)="deleteRow(i)" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+                      </tr>
+              </tbody>
+              <tfoot>
+                <tr><td> <button type="button" (click)="addNewRow()" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></td></tr>
+              </tfoot>
+            </table>
+        </div>
+
+    </div>
+  </div>
+  <div class="card-footer">
+   <button mat-raised-button color="primary">Submit</button>
+  </div>
+  </div>
+  </form>
+  
+  </div>
+  
+
+
+
+
+
+
+
+
+        
+ 

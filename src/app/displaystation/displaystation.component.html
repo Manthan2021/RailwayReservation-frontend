@@ -1,0 +1,52 @@
+<div class="x">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Station</h2>
+        </div>
+       
+    
+    
+              <!-- <tr *ngFor="let t of ticket|async">
+                trainid:{{t.tid}}
+                From:{{t.fromst}}
+                
+    </tr> -->
+    
+    <tr *ngFor="let t of station|async ;let i = index">
+      <div *ngIf="i <1">
+    <mat-card>Station ID:{{t.stationId}}</mat-card>
+    <br>
+    <br>
+    STOP:{{t.stop}}
+    <br>
+    <br>
+    </div>
+    </tr>
+    <br>
+    <br>
+    <br>
+
+    <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+              <tr>
+<th>Train ID</th>
+<th>Train Name</th>
+<th>Capacity</th>
+<th>Type</th>
+
+<tr *ngFor="let t of station|async ;let i = index">
+    <td>{{t.trainId}}</td>
+    
+        <td>{{t.trainName}}</td>
+    
+    <td>{{t.capacity}}</td>
+    
+    <td>{{t.type}}</td>
+    </tr>
+    </thead>
+    </table>
+    </div>
+    </div></div>
+    
+

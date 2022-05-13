@@ -1,0 +1,159 @@
+<div class="container-fluid">
+    <form [formGroup]= "addnew" (ngSubmit)="onSubmit(addnew.value)">
+    <div class="card">
+      <div class="card-header text-center">Add Ticket</div>
+      <div class="card-body">
+        <div class="row">
+            <div class="col-sm-4">
+                 <mat-form-field appearance="outline">
+                    <mat-label>train_Id: </mat-label>
+                    <input matInput  placeholder="trainId" ngModel formControlName="train_id" >
+                    <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                      <span>Please Enter Valid Number</span>
+                    </mat-error> -->
+                  </mat-form-field>
+                  </div>
+                  </div>
+                  <br>
+                  <br>
+         
+                  <div class="row">
+                  <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                       <mat-label>From Station: </mat-label>
+                       <input matInput  placeholder="From Station" ngModel formControlName="fromst" >
+                       <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                         <span>Please Enter Valid Number</span>
+                       </mat-error> -->
+                     </mat-form-field>
+                     </div>
+                     </div>
+                     <br>
+                     <br>
+
+                     <div class="row">
+                     <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                           <mat-label>To Station: </mat-label>
+                           <input matInput  placeholder="From Station" ngModel formControlName="tost" >
+                           <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                             <span>Please Enter Valid Number</span>
+                           </mat-error> -->
+                         </mat-form-field>
+                         </div>
+                         </div>
+                         <br>
+                         <br>
+
+
+
+
+                             <div class="row">
+                         <div class="col-sm-4">
+                            <mat-form-field appearance="outline">
+                               <mat-label>Departure Date :</mat-label>
+                               <input matInput  placeholder="departure date" ngModel formControlName="deptdate" >
+                               <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                                 <span>Please Enter Valid Number</span>
+                               </mat-error> -->
+                             </mat-form-field>
+                             </div>
+                             </div>
+                             <br>
+                             <br>
+
+
+                             <div class="row">
+                         <div class="col-sm-4">
+                            <mat-form-field appearance="outline">
+                               <mat-label>Arrival Date :</mat-label>
+                               <input matInput  placeholder="Arrival date" ngModel formControlName="arrdate" >
+                               <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                                 <span>Please Enter Valid Number</span>
+                               </mat-error> -->
+                             </mat-form-field>
+                             </div>
+                             </div>
+                             <br>
+                             <br>
+
+                             <div class="row">
+                             <div class="col-sm-4">
+                                <mat-form-field appearance="outline">
+                                   <mat-label>Departure Time :</mat-label>
+                                   <input matInput  placeholder="Departure Time" ngModel formControlName="deptTime" >
+                                   <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                                     <span>Please Enter Valid Number</span>
+                                   </mat-error> -->
+                                 </mat-form-field>
+                                 </div>
+                                 </div>
+                                 <br>
+                                 <br>
+
+                                 <div class="row">
+                                 <div class="col-sm-4">
+                                    <mat-form-field appearance="outline">
+                                       <mat-label>Arrival Time :</mat-label>
+                                       <input matInput  placeholder="Arrival Time" ngModel formControlName="arrTime" >
+                                       <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                                         <span>Please Enter Valid Number</span>
+                                       </mat-error> -->
+                                     </mat-form-field>
+                                     </div>
+                                     </div>
+                                     <br>
+                                     <br>
+                  <!-- <div class="row">
+                    <div class="col-sm-4">
+                  <mat-form-field>
+                    <mat-label>stop</mat-label>
+                    <input placeholder="stop">
+                  </mat-form-field>
+            </div>
+            </div> -->
+            <div class="row">
+              <div class="col-sm-12 table-responsive" formArrayName="passenger">
+                <table class="table">
+                  <thead>
+                      <tr>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Passenger Name</th>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center">Age </th>
+                        <!-- <th style="white-space: nowrap;padding-right: 4em;float:center">Train Name </th>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center">Capacity </th>
+                        <th style="white-space: nowrap;padding-right: 4em;float:center">Type</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let p of addnew.controls.passenger['controls']; let i=index"  [formGroupName]= "i">
+                        <td style="white-space: nowrap;">
+                          <mat-form-field appearance="outline">
+                             
+                           <input  id="pname{{i}}" ngModel matInput formControlName="pname" >
+                          </mat-form-field>
+                        </td>
+                        <td> <input  id="age{{i}}" ngModel matInput formControlName="age" ></td>
+                        <!-- <td> <input  id="trainName{{i}}" ngModel matInput formControlName="trainName" ></td>
+                        <td> <input  id="capacity{{i}}" ngModel matInput formControlName="capacity" ></td>
+                        <td> <input  id="type{{i}}" ngModel matInput formControlName="type"></td> -->
+                        <!-- <td> <textarea id="trainName{{i}}" formControlName="train.trainName"    class="form-control reset" ></textarea></td>
+                        <td> <textarea formControlName="train.capacity" class="form-control reset"></textarea></td>
+                        <td> <textarea formControlName="train.type" class="form-control reset"></textarea></td> -->
+                        <td> <button *ngIf="addnew.controls.passenger['controls'].length > 1" (click)="deleteRow(i)" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+                      </tr>
+              </tbody>
+              <tfoot>
+                <tr><td> <button type="button" (click)="addNewRow()" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></td></tr>
+              </tfoot>
+            </table>
+        </div>
+
+    </div>
+  </div>
+  <div class="card-footer">
+   <button mat-raised-button color="primary">Submit</button>
+  </div>
+  </div>
+  </form>
+  
+  </div>
