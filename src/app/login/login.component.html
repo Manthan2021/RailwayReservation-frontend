@@ -1,4 +1,6 @@
-
+<html>
+  <br><br><br><br><br><br>
+  <body style="background-image: url('assets/images/irctc5.jfif');background-repeat: no-repeat;background-size:100% 100%;">
 <div class="container">
 <div class="row">
 <div class="col-md-6">
@@ -9,18 +11,25 @@
 
 </div>
 <form>
-    <form>
+    <form ngNativeValidate>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email"
           placeholder="Your email address...">
         </div>
+        
         <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
           <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password"
           placeholder="Your password...">
         </div>
         <button type="button" (click)="checkLogin()"
         class="btn btn-info w-50 p-2 text-white fw-bold btn-block btn-round">Login</button>
+
+        <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div> 
+        <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+
+
       </form>
 </form>
 </div>
@@ -29,4 +38,5 @@
 
 
 </div>
-
+</body>
+</html>

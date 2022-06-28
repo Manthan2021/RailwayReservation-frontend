@@ -28,7 +28,7 @@ ticket:Observable<Ticket[]>|undefined;
 }
 
 reloadData(){
-  this.tid = sessionStorage.getItem('tid');
+  this.tid = sessionStorage.getItem('ticketid');
 this.ticket=this.tService.getTicket(this.tid);
 
 }

@@ -1,0 +1,27 @@
+<html>
+  <br><br><br><br><br><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Station List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Station Id</th>
+            <th>Station Name</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let station of stations | async">
+                <td>{{station.stationId}}</td>
+                <td>{{station.stop}}</td>
+                
+                <td></td>
+                
+          </tbody>
+</table>
+</div>
+</div>
+</html>
+

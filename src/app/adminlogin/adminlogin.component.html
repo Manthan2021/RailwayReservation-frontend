@@ -1,0 +1,36 @@
+<html>
+  <br><br><br><br><br><br>
+  <body style="background-image: url('assets/images/irctc6.jfif');background-repeat: no-repeat;background-size:100% 100%;">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="text-center">
+<h1>Login</h1>
+<h6>please enter email & password</h6>
+
+</div>
+<form>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="ademail" name="ademail"
+          placeholder="Your email address...">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password"
+          placeholder="Your password...">
+        </div>
+        <button type="button" (click)="checkLogin()"
+        class="btn btn-info w-50 p-2 text-white fw-bold btn-block btn-round">Login</button>
+      </form>
+</form>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

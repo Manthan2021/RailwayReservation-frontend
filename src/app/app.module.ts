@@ -22,6 +22,26 @@ import { GettrainComponent } from './gettrain/gettrain.component';
 import { DisplaytrainComponent } from './displaytrain/displaytrain.component';
 import { GetreturntrainComponent } from './getreturntrain/getreturntrain.component';
 import { DisplayreturntrainComponent } from './displayreturntrain/displayreturntrain.component';
+import { UpdatetraincapacityComponent } from './updatetraincapacity/updatetraincapacity.component';
+import { AddtrainComponent } from './addtrain/addtrain.component';
+import { AddreturntrainComponent } from './addreturntrain/addreturntrain.component';
+import { FindtrainsComponent } from './findtrains/findtrains.component';
+import { DisplayfindtrainsComponent } from './displayfindtrains/displayfindtrains.component';
+import { GetalltrainsComponent } from './getalltrains/getalltrains.component';
+import { PrintticketComponent } from './printticket/printticket.component';
+import { NgxPrintModule } from 'ngx-print';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { GetallstationsComponent } from './getallstations/getallstations.component';
 
 
 @NgModule({
@@ -42,7 +62,20 @@ import { DisplayreturntrainComponent } from './displayreturntrain/displayreturnt
     GettrainComponent,
     DisplaytrainComponent,
     GetreturntrainComponent,
-    DisplayreturntrainComponent
+    DisplayreturntrainComponent,
+    UpdatetraincapacityComponent,
+    AddtrainComponent,
+    AddreturntrainComponent,
+    FindtrainsComponent,
+    DisplayfindtrainsComponent,
+    GetalltrainsComponent,
+    PrintticketComponent,
+    DashboardComponent,
+    AdminloginComponent,
+    AdmindashboardComponent,
+    HeaderComponent,
+    SidenavComponent,
+    GetallstationsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +83,14 @@ import { DisplayreturntrainComponent } from './displayreturntrain/displayreturnt
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPrintModule,MatSidenavModule,
+    //Material
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDividerModule,
+    MatListModule,
   ],
 schemas:[CUSTOM_ELEMENTS_SCHEMA],
 

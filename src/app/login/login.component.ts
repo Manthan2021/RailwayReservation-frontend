@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConsumerService } from '../consumer.service';
-
+import { FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class LoginComponent implements OnInit {
       console.log(response);
 
       if (response) {
-        this.route.navigate(['']);
+        this.route.navigate(['/dashboard']);
 
         sessionStorage.setItem('email', this.email);
     

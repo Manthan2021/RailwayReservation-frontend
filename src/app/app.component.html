@@ -21,6 +21,7 @@
     </a>
 </div>
 </nav> -->
+
      
 <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
 
@@ -30,69 +31,109 @@
     </a>
     <div>
       <a routerLink="/login">
-        <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+        <button type="button"  *ngIf=" !aService.isUserLoggedIn()" class="btn  btn-outline-primary mx-1 p-2 my-3"><span
             class="m-4">Log In <i class="fas fa-chevron-right"></i></span></button>
       </a>
 
       <a routerLink="/home">
-        <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+        <button type="button"   class="btn  btn-outline-primary mx-1 p-2 my-3"><span
           class="m-4">Home <i class="fas fa-chevron-right"></i></span></button>
       </a>
 
       <a routerLink="/register">
-        <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+        <button type="button"  *ngIf=" !aService.isUserLoggedIn()" class="btn  btn-outline-primary mx-1 p-2 my-3"><span
           class="m-4">Signup<i class="fas fa-chevron-right"></i></span></button>
           </a>
       
-          <a routerLink="/addstation">
+          <!-- <a routerLink="/addstation">
             <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
               class="m-4">ADD Station <i class="fas fa-chevron-right"></i></span></button>
-              </a>
+              </a> -->
 
-              <a routerLink="/addreturnstation">
+              <!-- <a routerLink="/addreturnstation">
                 <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                   class="m-4">ADD Return Station <i class="fas fa-chevron-right"></i></span></button>
-                  </a>
+                  </a> -->
 
-                  <a routerLink="/addticket">
+                  <!-- <a routerLink="/addticket">
                     <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                       class="m-4">ADD Ticket <i class="fas fa-chevron-right"></i></span></button>
-                      </a>
+                      </a> -->
 
-                      <a routerLink="/getticket">
+                      <!-- <a routerLink="/getticket">
                         <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                           class="m-4">GET Ticket <i class="fas fa-chevron-right"></i></span></button>
-                          </a>
+                          </a> -->
 
                           <!-- <a routerLink="/displayticket">
                             <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                               class="m-4">Display Ticket <i class="fas fa-chevron-right"></i></span></button>
                               </a> -->
 
-                              <a routerLink="/getstation">
+                              <!-- <a routerLink="/getstation">
                                 <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                                   class="m-4">Get Station<i class="fas fa-chevron-right"></i></span></button>
-                                  </a>
-                                  <a routerLink="/getreturnstation">
+                                  </a> -->
+                                  <!-- <a routerLink="/getreturnstation">
                                     <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                                       class="m-4">Get Return Station<i class="fas fa-chevron-right"></i></span></button>
-                                      </a>
+                                      </a> -->
 
-                                      <a routerLink="/gettrain">
+                                      <!-- <a routerLink="/gettrain">
                                         <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                                           class="m-4">Get Train<i class="fas fa-chevron-right"></i></span></button>
-                                          </a>
-                                          <a routerLink="/getreturntrain">
+                                          </a> -->
+                                          <!-- <a routerLink="/getreturntrain">
                                             <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
                                               class="m-4">Get Return Train<i class="fas fa-chevron-right"></i></span></button>
-                                              </a>
+                                              </a> -->
+
+                                              <!-- <a routerLink="/addtrain">
+                                                <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                  class="m-4">Add Train<i class="fas fa-chevron-right"></i></span></button>
+                                                  </a> -->
+
+                                                  <!-- <a routerLink="/addreturntrain">
+                                                    <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                      class="m-4">Add Return Train<i class="fas fa-chevron-right"></i></span></button>
+                                                    </a> -->
+
+                                                    
+                                                      <!-- <a routerLink="/findtrain">
+                                                        <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                          class="m-4">Find Train<i class="fas fa-chevron-right"></i></span></button>
+                                                          </a>                             -->
+
+                                                          <!-- <a routerLink="/getalltrains">
+                                                            <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                              class="m-4">Get All Trains<i class="fas fa-chevron-right"></i></span></button>
+                                                              </a>  -->
+                                                              
+                                                              <a routerLink="/adminlogin">
+                                                                <button type="button"  *ngIf=" !aService.isUserLoggedIn()" class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                                  class="m-4">Admin Login<i class="fas fa-chevron-right"></i></span></button>
+                                                                  </a> 
+
+                                                                  <!-- <a routerLink="/getallstations">
+                                                                    <button type="button"  class="btn  btn-outline-primary mx-1 p-2 my-3"><span
+                                                                      class="m-4">Get All Stations<i class="fas fa-chevron-right"></i></span></button>
+                                                                      </a>  -->
+
+                                                                
+                                                                    <a routerLink="/admin-dashboard">
+                                                                      <button type="button" *ngIf="aService.isUserLoggedIn()" class="btn  btn-primary mx-1 p-2 my-3"><span
+                                                                          class="m-4">Back to admin <i class="fas fa-chevron-right"></i></span></button>
+                                                                    </a>
+                                                                 
+                                                                 
+                                                                
+
 
 
           </div>
           </div>
           </nav>
 
-    
 
 <router-outlet></router-outlet>
 

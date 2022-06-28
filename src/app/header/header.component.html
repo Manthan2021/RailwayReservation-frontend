@@ -1,0 +1,135 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+      <button mat-icon-button (click)="toggleSidebar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="row mr-2 ml-auto">
+        <ul class="row m-0 align-items-center">
+          <li>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              class="user mt-2 d-flex align-items-center"
+            >
+           
+              ADMIN
+              <mat-icon class="user-image-icon ml-1"
+                >keyboard_arrow_down</mat-icon
+              >
+            </button>
+            <mat-menu #menu="matMenu">
+              <!-- <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+              </button> -->
+              <!-- <a mat-button  routerLink="/home" onclick="logout()"   target="_blank">  <mat-icon>exit_to_app</mat-icon> Logout</a> -->
+              <a mat-list-item routerLinkActive="list-item-active" routerLink="/home" (click)="logout()"> <mat-icon>exit_to_app</mat-icon> Logout</a>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+<br><br><br>
+  <div class="x" style="background-color:#021235">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/getticket">Get Tickets</a>
+    <!-- <a mat-button href="/getticket"  target="_blank">Get Tickets</a> -->
+  </div>
+  </div>
+  
+  <div class="x" style="background-color:#021235; margin-top:-125px; margin-left:400px ; ">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/addstation">Add Station</a>
+    <!-- <a mat-button href="/addstation"  target="_blank">Add Station</a> -->
+  </div>
+  </div>
+  
+  <div class="x" style="background-color:#021235; margin-top:-125px; margin-left:800px ;">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/getstation">Get Station</a>
+    <!-- <a mat-button href="/getstation"  target="_blank">Get Station</a> -->
+  </div>
+  </div>
+  <br>
+  <br>
+  <br><br><br>
+
+  <div class="x" style="background-color:#021235;">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/addtrain">Add Train</a>
+  </div>
+  </div>
+  
+  <div class="x" style="background-color:#021235; margin-top:-125px; margin-left:400px ;">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/gettrain">Get Train</a>
+
+    <!-- <a mat-button href="/gettrain"  target="_blank">Get Train</a> -->
+  </div>
+  </div>
+  
+  <div class="x" style="background-color:#021235; margin-top:-125px; margin-left:800px ;">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/getalltrains">Get All Trains</a>
+
+    <!-- <a mat-button href="/getalltrains"  target="_blank">Get All Trains</a> -->
+  </div>
+  </div>
+
+  <br>
+  <br>
+  <br><br><br>
+
+  <div class="x" style="background-color:#021235;">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/getallstations">Get All Stations</a>
+
+    <!-- <a mat-button href="/getalltrains"  target="_blank">Get All Trains</a> -->
+  </div>
+  </div>
+
+
+  <div class="x" style="background-color:#021235; margin-top:-125px; margin-left:400px ; ">  
+    <img src="assets/images/irctclogo.jfif"   alt="Company Logo"  width="30%"/>
+    <div id="a1">
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/findtrain">Book Tickets</a>
+    <!-- <a mat-button href="/addstation"  target="_blank">Add Station</a> -->
+  </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+

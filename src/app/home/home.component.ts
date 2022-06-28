@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  route: any;
+ 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   getaccount(){
     console.log("hello");
-    this.route.navigate(['/register']);
+    this.router.navigate(['/register']);
   }
 }

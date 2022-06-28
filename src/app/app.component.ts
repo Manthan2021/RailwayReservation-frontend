@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AdminserviceService } from './adminservice.service';
 import { ConsumerService } from './consumer.service';
 
 @Component({
@@ -9,5 +10,5 @@ import { ConsumerService } from './consumer.service';
 export class AppComponent {
   title = 'Railway-Reservation';
 
-  constructor(public cService:ConsumerService){}
+  constructor(public cService:ConsumerService,public aService:AdminserviceService){}
 }

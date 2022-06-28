@@ -9,6 +9,7 @@ export class ConsumerService {
 
 baseUrl='http://localhost:6767/irctc/consumer'
 baseUrl1='http://localhost:6767/irctc/consumerlogin'
+baseUrl2='http://localhost:6767/irctc/getConsumer'
 
   constructor(private http:HttpClient) { }
  
@@ -19,6 +20,14 @@ baseUrl1='http://localhost:6767/irctc/consumerlogin'
 
   login(consumer: any): Observable<any> {
     return this.http.post(`${this.baseUrl1}`, consumer);
+  }
+
+  getConsumer(custEmail:any):Observable<any>{
+    return this.http.get(`${this.baseUrl2}/${custEmail}`);
+  }
+
+  logOut() {
+    sessionStorage.removeItem('email');
   }
 
 

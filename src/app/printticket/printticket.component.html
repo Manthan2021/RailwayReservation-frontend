@@ -1,0 +1,88 @@
+
+
+<html>
+  <br><br><br><br><br><br>
+<div class="x">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Ticket</h2>
+        </div>
+       
+    
+    
+              <!-- <tr *ngFor="let t of ticket|async">
+                trainid:{{t.tid}}
+                From:{{t.fromst}}
+                
+    </tr> -->
+    
+    <tr *ngFor="let t of ticket|async ;let i = index">
+      <div *ngIf="i <1">
+    <mat-card>Ticket ID:{{t.tid}}</mat-card>
+    <br>
+    <br>
+    Train ID:{{t.train_id}}
+    <br>
+    <br>
+    From:{{t.fromst}}
+    <br>
+    <br>
+    TO:{{t.tost}}
+    <br>
+    <br>
+    Departure Date:{{t.deptdate}}
+    <br>
+    <br>
+    <!-- Arrival Date:{{t.arrdate}}
+    <br>
+    <br>
+    Departure Time:{{t.deptTime}}
+    <br>
+    <br>
+    Arrival Time:{{t.arrTime}} -->
+    
+    <br>
+    <br>
+    </div>
+    </tr>
+    <br>
+    <br>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          
+          <tr>
+            <!-- <th>ticket ID</th>
+            <th>train ID</th>
+            <th>From Station</th>
+            <th>TO Station</th>
+            <th>Deptt date</th>
+            <th>Arrival date</th>
+            <th>Deptt time</th>
+            <th>Arrival time</th> -->
+            <th>PassengerID</th>
+            <th>PassengerName</th>
+            <th>Age</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+    
+              <tr *ngFor="let t of ticket|async ;let i = index">
+               
+                 
+                <td>{{t.pid}}</td>
+                <td>{{t.pname}}</td>  
+                <td>{{t.age}}</td> 
+             
+    
+    </tr>
+    
+    <!-- Manthan:{{ticket.train_id}} -->
+            </tbody>
+          </table>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+    </html>

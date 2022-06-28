@@ -1,0 +1,30 @@
+<html>
+  <br><br><br><br><br><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Train List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Train Id</th>
+            <th>Train Name</th>
+            <th>Capacity</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let train of trains | async">
+                <td>{{train.trainId}}</td>
+                <td>{{train.trainName}}</td>
+                <td>{{train.capacity}}</td>
+                <td>{{train.type}}</td>
+                <td></td>
+
+
+          </tbody>
+</table>
+</div>
+</div>
+</html>

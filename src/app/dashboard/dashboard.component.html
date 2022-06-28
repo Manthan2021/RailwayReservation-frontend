@@ -1,0 +1,85 @@
+<html>
+  <br><br><br><br><br><br>
+<main>
+  
+    <section class="glass my-5">
+  
+      <div class="dashboard">
+        <div class="user">
+          <img src="assets/images/user.png" height="50px" alt="">
+          <h4>{{consumer.fname}} </h4>
+          <h6>{{consumer.lname}} </h6>
+          <p>{{user}}</p>
+        </div>
+        <div class="links">
+          <div class="link">
+            <img src="assets/images/home.png" height="30px" style="border: 1px solid; border-radius: 50%;" alt="">
+            <h6 (click)="bookticket() " class="gap1">Book Tickets</h6>
+          </div>
+  
+          <div class="link">
+            <img src="assets/images/rising.png" style="border: 0.5px solid; border-radius: 50%;" height="30px" alt="">
+            <h6 class="gap" (click)="getalltrains()">Get All Trains</h6>
+          </div>
+
+          <div class="link">
+            <img src="assets/images/information.png" style="border: 1px solid; border-radius: 50%;" height="30px" alt="">
+            <h6 class="gap" routerLink="/gettrain">Get Train</h6>
+          </div>
+        </div>
+  
+          <div class="link">
+            <img src="assets/images/contact.png" style="border: 1px solid; border-radius: 50%;" height="30px" alt="">
+            <h6 class="gap" routerLink="/contactus">Contact Us</h6>
+          </div>
+  
+          
+  
+        <div class="pro">
+          <!-- <h5 (click)="createaccount()" class="gap"><i class="fas fa-university"></i>       Join Us for free Basic Account</h5> -->
+          <img src="assets/images/add-user.png" height="30px" alt="">
+        </div>
+  
+      </div>
+  
+      <div class="games">
+        <div class="status">
+          <h3 class="activegames">Hello {{consumer.fname}}</h3>
+  
+        </div>
+        <div class="rods">
+          <div class="rod py-5 d-flex justify-content-around btn">
+            <div>
+              <img src="assets/images/information.png" class="mx-4" height="30px" width="30px" alt="">
+            </div>
+            <div class="card-info" routerLink="/findtrain">
+              <h4>Book Ticket</h4>
+              <p>Click Here to Book Tickets</p>
+              <div class="prgs"></div>
+            </div>
+  
+          </div>
+  
+          <div class="rod py-5 d-flex justify-content-around btn">
+            <div>
+              <img src="assets/images/information.png" class="mx-4" height="30px" width="30px" alt="">
+            </div>
+            <div class="card-info" routerLink="/getticket">
+              <h4> Get Ticket</h4>
+              <p>Get your ticket by id</p>
+              <div class="prgs"></div>
+            </div>
+          </div>
+  
+  
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  </html>
+  
+  
+  

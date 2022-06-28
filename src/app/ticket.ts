@@ -7,8 +7,8 @@ deptdate:string='';
 arrdate:string='';
 deptTime:string='';
 arrTime:string='';
-pid:number=0;
-pname:string='';
-age:number=0;
+ pid:number=0;
+ pname:string='';
+ age:number=0;
 
 }

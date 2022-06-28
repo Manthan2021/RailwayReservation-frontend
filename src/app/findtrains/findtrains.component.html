@@ -1,0 +1,48 @@
+<html>
+  <br><br><br><br><br><br>
+<body style="background-image: url('assets/images/irctc2.jfif');background-repeat: no-repeat;background-size:100% 100%;">
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="card">
+    <div class="text-center">
+    <h1>Find Trains</h1>
+    <h6></h6>
+    
+    </div>
+   
+      <form [formGroup]="searchForm" (ngSubmit)="getTrainId()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">From:</label>
+              <input type="email" class="form-control" id="email" [(ngModel)]="t1" name="t1" formControlName="t1"
+              placeholder="Enter station name">
+            </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">To:</label>
+                <input type="email" class="form-control" id="email" [(ngModel)]="t2" name="t2" formControlName="t2"
+                placeholder="Enter station name">
+              </div>
+  
+              
+              <div class="mb-3">
+                <label>Date:</label>
+                
+                  <input type="date" class="form-control" id="TDate" name="TDate"
+                   formControlName="TDate">
+                
+              </div>
+
+            <button type="button" (click)="getTrainId()"
+            class="btn btn-info w-50 p-2 text-white fw-bold btn-block btn-round">Get Train</button>
+          </form>
+    
+    </div>
+    </div>
+    </div>
+    
+    
+    </div>
+</body>
+</html>

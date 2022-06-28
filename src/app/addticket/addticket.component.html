@@ -7,10 +7,12 @@
             <div class="col-sm-4">
                  <mat-form-field appearance="outline">
                     <mat-label>train_Id: </mat-label>
-                    <input matInput  placeholder="trainId" ngModel formControlName="train_id" >
+                    <!-- <input matInput  placeholder="trainId" ngModel formControlName="train_id" > -->
                     <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                       <span>Please Enter Valid Number</span>
                     </mat-error> -->
+                  {{this.trainId}}
+
                   </mat-form-field>
                   </div>
                   </div>
@@ -21,7 +23,9 @@
                   <div class="col-sm-4">
                     <mat-form-field appearance="outline">
                        <mat-label>From Station: </mat-label>
-                       <input matInput  placeholder="From Station" ngModel formControlName="fromst" >
+                        {{this.fromSt}}
+
+                       <!-- <input matInput  placeholder="From Station" ngModel formControlName="fromst" > -->
                        <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                          <span>Please Enter Valid Number</span>
                        </mat-error> -->
@@ -31,16 +35,18 @@
                      <br>
                      <br>
 
-                     <div class="row">
+                    <div class="row">
                      <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                            <mat-label>To Station: </mat-label>
-                           <input matInput  placeholder="From Station" ngModel formControlName="tost" >
+                          {{this.toSt}}
+                           <!-- <input matInput  placeholder="From Station" ngModel formControlName="tost" > -->
                            <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                              <span>Please Enter Valid Number</span>
                            </mat-error> -->
-                         </mat-form-field>
-                         </div>
+                          
+                         </mat-form-field> 
+                          </div>
                          </div>
                          <br>
                          <br>
@@ -52,18 +58,19 @@
                          <div class="col-sm-4">
                             <mat-form-field appearance="outline">
                                <mat-label>Departure Date :</mat-label>
-                               <input matInput  placeholder="departure date" ngModel formControlName="deptdate" >
+                               <!-- <input matInput  placeholder="departure date" ngModel formControlName="deptdate" >  -->
                                <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                                  <span>Please Enter Valid Number</span>
                                </mat-error> -->
-                             </mat-form-field>
+                               {{this.deptDate}}
+                            </mat-form-field>
                              </div>
                              </div>
                              <br>
-                             <br>
+                              <br> 
 
 
-                             <div class="row">
+                            <!-- <div class="row">
                          <div class="col-sm-4">
                             <mat-form-field appearance="outline">
                                <mat-label>Arrival Date :</mat-label>
@@ -71,7 +78,7 @@
                                <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                                  <span>Please Enter Valid Number</span>
                                </mat-error> -->
-                             </mat-form-field>
+                             <!-- </mat-form-field>
                              </div>
                              </div>
                              <br>
@@ -81,11 +88,11 @@
                              <div class="col-sm-4">
                                 <mat-form-field appearance="outline">
                                    <mat-label>Departure Time :</mat-label>
-                                   <input matInput  placeholder="Departure Time" ngModel formControlName="deptTime" >
+                                   <input matInput  placeholder="Departure Time" ngModel formControlName="deptTime" > -->
                                    <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                                      <span>Please Enter Valid Number</span>
                                    </mat-error> -->
-                                 </mat-form-field>
+                                 <!-- </mat-form-field>
                                  </div>
                                  </div>
                                  <br>
@@ -99,9 +106,9 @@
                                        <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
                                          <span>Please Enter Valid Number</span>
                                        </mat-error> -->
-                                     </mat-form-field>
+                                     <!-- </mat-form-field>
                                      </div>
-                                     </div>
+                                     </div>  -->
                                      <br>
                                      <br>
                   <!-- <div class="row">

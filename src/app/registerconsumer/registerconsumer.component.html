@@ -1,3 +1,72 @@
+<html> 
+  <br><br><br><br><br><br>
+<body style="background-image: url('assets/images/irctc2.jfif');background-repeat: no-repeat;background-size:100% 100%;">
+  
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="card">
+    <div class="text-center">
+    <h1>Sign Up</h1>
+    <h3>Register Yourself</h3>
+    
+    </div>
+    <form>
+        <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+          <div class="form-group container">
+            <div class="form-group">
+            <div class="mb-3">
+              <label for="name">First Name</label>
+              <input type="text" class="form-control" id="fname"   formControlName="fname"  required [(ngModel)]="consumer.fname" name="fname">
+            </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-group">
+              <label for="name">Last Name</label>
+              <input type="text" class="form-control" id="lname"  formControlName="lname"  required [(ngModel)]="consumer.lname" name="lname">
+            </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-group">
+              <label for="name">Email</label>
+              <input type="text" class="form-control" id="email"   formControlName="email"  required [(ngModel)]="consumer.email" name="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-group">
+              <label for="name">Mobile Number</label>
+        <input type="text" class="form-control" id="mobilenumber" formControlName="mobilenumber"  required [(ngModel)]="consumer.mobilenumber" name="mobilenumber">
+            </div>
+          </div>
+            <div class="mb-3">
+              <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password"  required [(ngModel)]="consumer.password" name="password">
+            </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+    </form>
+    
+    </form>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    
+    
+
+</body>
+
+</html>
+
+
 <!-- <h3>Sign up user</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()" ngNativeValidate>
@@ -34,47 +103,4 @@
     <h4>You submitted successfully!</h4>
     <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
   <!-- </div> --> 
-  <div class="container">
-    <div class="row">
-    <div class="col-md-6">
-    <div class="card">
-    <div class="text-center">
-    <h1>Sign Up</h1>
-    <h6>Register Yourself</h6>
-    
-    </div>
-    <form>
-        <form (ngSubmit)="onSubmit()" ngNativeValidate>
-            <div class="mb-3">
-              <label for="name">First Name</label>
-              <input type="text" class="form-control" id="fname" required [(ngModel)]="consumer.fname" name="fname">
-            </div>
-            <div class="mb-3">
-              <label for="name">Last Name</label>
-              <input type="text" class="form-control" id="lname" required [(ngModel)]="consumer.lname" name="lname">
-            </div>
-            <div class="mb-3">
-              <label for="name">Email</label>
-              <input type="text" class="form-control" id="email" required [(ngModel)]="consumer.email" name="email">
-            </div>
-            <div class="mb-3">
-              <label for="name">Mobile Number</label>
-        <input type="text" class="form-control" id="mobilenumber" required [(ngModel)]="consumer.mobilenumber" name="mobilenumber">
-            </div>
-            <div class="mb-3">
-              <label for="name">Password</label>
-              <input type="text" class="form-control" id="password" required [(ngModel)]="consumer.password" name="password">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-    </form>
-    
-    
-    </div>
-    
-    </div>
-    </div>
-    </div>
-    
-    
+ 

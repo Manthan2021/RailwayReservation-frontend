@@ -16,6 +16,7 @@ tid:any;
   constructor(private tService:TicketService,private router:Router) { }
 
   ngOnInit(): void {
+    
   }
 
   
@@ -25,8 +26,9 @@ console.log(this.tid);
 this.tService.getTicket(this.tid).subscribe((response) => {
   console.log(response);
   if (response) {
-    this.router.navigate(['displayticket']);
     sessionStorage.setItem('tid', this.tid);
+    this.router.navigate(['printticket']);
+   
 
 }
 });

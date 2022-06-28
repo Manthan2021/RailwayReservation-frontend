@@ -1,17 +1,19 @@
+
 <div class="x">
+  <button printSectionId="print-me" ngxPrint>Print Ticket</button>
 <div class="panel panel-primary">
     <div class="panel-heading">
+      <br><br>
       <h2>Ticket</h2>
     </div>
-   
-
-
           <!-- <tr *ngFor="let t of ticket|async">
             trainid:{{t.tid}}
             From:{{t.fromst}}
             
 </tr> -->
 
+
+<div id="print-me">
 <tr *ngFor="let t of ticket|async ;let i = index">
   <div *ngIf="i <1">
 <mat-card>Ticket ID:{{t.tid}}</mat-card>
@@ -29,13 +31,13 @@ TO:{{t.tost}}
 Departure Date:{{t.deptdate}}
 <br>
 <br>
-Arrival Date:{{t.arrdate}}
+<!-- Arrival Date:{{t.arrdate}}
 <br>
 <br>
 Departure Time:{{t.deptTime}}
 <br>
 <br>
-Arrival Time:{{t.arrTime}}
+Arrival Time:{{t.arrTime}} -->
 
 <br>
 <br>
@@ -78,5 +80,8 @@ Arrival Time:{{t.arrTime}}
         </tbody>
       </table>
     </div>
+  </div> 
+   <br><br><br><br><br><br><br><br><br><br><br>
   </div>
-</div>
+     
+    

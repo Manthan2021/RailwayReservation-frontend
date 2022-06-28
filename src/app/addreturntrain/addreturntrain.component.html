@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="card">
+    <div class="text-center">
+    
+    <h3>Register Train</h3>
+    
+    </div>
+    <form>
+        <form (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="mb-3">
+              <label for="name">Train Name</label>
+              <input type="text" class="form-control" id="trainName" required [(ngModel)]="train.trainName" name="trainName">
+            </div>
+            <div class="mb-3">
+              <label for="name">Capacity</label>
+              <input type="text" class="form-control" id="lname" required [(ngModel)]="train.capacity" name="capacity">
+            </div>
+            <div class="mb-3">
+              <label for="name">Type</label>
+              <input type="text" class="form-control" id="email" required [(ngModel)]="train.type" name="type">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </form>
+    
+    
+    </div>
+    
+    </div>
+    </div>
+    </div>

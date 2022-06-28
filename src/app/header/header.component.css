@@ -1,0 +1,72 @@
+.mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  
+    li {
+      list-style: none;
+    }
+  
+  button {
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  .user {
+    font-size: 14px;
+  }
+  mat-toolbar {
+    background: #f7f7f7;
+  }
+  .user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+  }
+  
+  
+    .mat-menu-content {
+      width: 160px;
+    }
+  .x{
+    background-color: blueviolet;
+    color:white;
+    height:125px;
+    width:175px;
+  }
+  a{
+    color:rgb(90, 160, 207);
+    text-decoration: none;
+  }
+  #a1{
+padding-top:20px;
+padding-left:50px;
+
+  }
+
+  .x1{
+    background-color: orange;
+    color:white;
+    height:125px;
+    width:175px;
+  }
+
+  #a2{
+    padding-top:50px;
+    padding-left:50px;
+    
+      }
+
+
+
+
+
+
+
+
+
+
+
